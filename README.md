@@ -22,10 +22,9 @@ ORBSLAM3_Dense 是一个支持深度相机、双目相机稠密重建的SLam二�
 
 
 ## <div align="center">📦 源码编译</div>
-当你满足上述依赖时即可
+当你满足项目环境时
 ```shell
-chmod +x build.sh
-bash build.sh
+sh build.sh
 ```
 
 ## <div align="center">✨ 项目示例</div>
