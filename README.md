@@ -26,6 +26,8 @@ ORBSLAM3_Dense 是一个支持深度相机、双目相机稠密重建的SLam二�
 ```shell
 sh build.sh
 ```
+## <div align="center">📦 数据集准备 </div>
+见 [DataPrepare](DataPrepare.md)。
 
 ## <div align="center">✨ 项目示例</div>
 ### 深度相机
