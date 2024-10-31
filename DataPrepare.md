@@ -30,7 +30,7 @@
 * RGBD.DepthMapFactor 深度映射的尺度因子，如果为m的话就是1000.0，mm就是1.0
 * PointCloudMapping.Unit 单位尺度，m为1.0，mm为1000.00
 
-这些可能需要厂商提供，或者是用图像配准算法计算，这个作者并不在行；一个具体的实例如下。
+这些可能需要厂商提供，或者是用图像配准算法计算，这个作者并不在行；一个具体的实例如下（也可以见[MyExample/rgbd_orb.yaml](MyExample/rgbd_orb.yaml)）。
 ```yaml
 %YAML:1.0
 
@@ -240,7 +240,7 @@ python convertT.py -i ${path}/data.yaml
 * Stereo.T_c1_c2 转换矩阵
 * Stereo.Q 重投影矩阵，在data.yaml 里面有，复制一下就可以了。
 * PointCloudMapping.Unit 单位尺度，m为1.0，mm为1000.00
-一个示例文件如下
+一个示例文件如下,（也可以见[MyExample/stereoslam](MyExample/stereoslam.yam)）
 
 ![示例(./img/image5.png)
 将`yaml`文件转换好后，就可以开始运行测试数据集了。
