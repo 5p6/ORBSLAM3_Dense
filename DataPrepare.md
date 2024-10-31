@@ -175,6 +175,7 @@ python .\calibpython\stereocalib.py -l ./data/calib/left -r ./data/calib/right -
 标定好的`yaml`文件默认路径为 `param/euroc.yaml`，其中的内容如下，假设你将该文件的路径转换到 ${path}/data.yaml。
 ![[Pasted image 20240523225739.png|450]]
 其中 `K_l,K_r`分别为左右目的内参矩阵，`D_l,D_r`分别为左右目的畸变参数，`R,T` 为左目到右目的旋转矩阵和旋转向量，`Q` 就是重投影矩阵，将其转换为稠密重建的`yaml`文件的格式。但注意的是，在`yaml`文件中，转换矩阵`Stereo.T_c1_c2`和`R,T`的关系为
+
 $$ \begin{align}
   Stereo.T\_c1\_c2 &= \begin{bmatrix}
 R & T \\
