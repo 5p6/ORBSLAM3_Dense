@@ -176,7 +176,7 @@ python .\calibpython\stereocalib.py -l ./data/calib/left -r ./data/calib/right -
 ![[Pasted image 20240523225739.png|450]]
 其中 `K_l,K_r`分别为左右目的内参矩阵，`D_l,D_r`分别为左右目的畸变参数，`R,T` 为左目到右目的旋转矩阵和旋转向量，`Q` 就是重投影矩阵，将其转换为稠密重建的`yaml`文件的格式。但注意的是，在`yaml`文件中，转换矩阵`Stereo.T_c1_c2`和`R,T`的关系为
 
-$$ \begin{align}
+$$\begin{align}
   Stereo.T\_c1\_c2 &= \begin{bmatrix}
 R & T \\
 0^T & 1
@@ -186,6 +186,7 @@ R^T & -R^TT \\
 0^T &1
 \end{bmatrix}
 \end{align}$$
+
 其中用于转换的代码为 `convertT.py`
 ```python
 import numpy as np
