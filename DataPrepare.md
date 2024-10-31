@@ -149,7 +149,7 @@ PointCloudMapping.Unit: 1.0 # mm(1000) or m(1)
 ![目录](./img/image1.png)
 其中工具箱分为C++和python两种版本，这里推荐使用python版本的标定工具，比较简单且好用。在工具箱中有更详细的介绍，这里只介绍创建双目数据集的标定，这里选用方格角点标定方式。标定板可以使用打印店板子打印，标定板的图像如下
 
-![标定板]("./img/image2.png")
+![标定板](./img/image2.png)
 
 先克隆仓库
 ```bash
@@ -175,9 +175,9 @@ python .\calibpython\stereocalib.py -l ./data/calib/left -r ./data/calib/right -
 * -s 棋盘格方格尺寸（圆格就是中间圆心之间的距离，这个是要用尺子测量的，一定要测量）
 * -rs 亚角点查找半径（圆格不用管）
 标定的部分结果如下
-![[Pasted image 20240523224859.png]]
+![结果](./img/image3.png)
 标定好的`yaml`文件默认路径为 `param/euroc.yaml`，其中的内容如下，假设你将该文件的路径转换到 ${path}/data.yaml。
-![[Pasted image 20240523225739.png|450]]
+![转换](./img/image4.png)
 其中 `K_l,K_r`分别为左右目的内参矩阵，`D_l,D_r`分别为左右目的畸变参数，`R,T` 为左目到右目的旋转矩阵和旋转向量，`Q` 就是重投影矩阵，将其转换为稠密重建的`yaml`文件的格式。但注意的是，在`yaml`文件中，转换矩阵`Stereo.T_c1_c2`和`R,T`的关系为
 
 $$\begin{align}
@@ -241,5 +241,5 @@ python convertT.py -i ${path}/data.yaml
 * PointCloudMapping.Unit 单位尺度，m为1.0，mm为1000.00
 一个示例文件如下
 
-![[Pasted image 20240523231425.png]]
+![示例(./img/image5.png)
 将`yaml`文件转换好后，就可以开始运行测试数据集了。
