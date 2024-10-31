@@ -240,7 +240,7 @@ python convertT.py -i ${path}/data.yaml
 * Stereo.T_c1_c2 转换矩阵
 * Stereo.Q 重投影矩阵，在data.yaml 里面有，复制一下就可以了。
 * PointCloudMapping.Unit 单位尺度，m为1.0，mm为1000.00
-一个示例文件如下,（也可以见[MyExample/stereoslam](MyExample/stereoslam.yam)）
+一个示例文件如下,（也可以见[MyExample/stereoslam](MyExample/stereoslam.yaml)）
 
 ![示例(./img/image5.png)
 将`yaml`文件转换好后，就可以开始运行测试数据集了。
