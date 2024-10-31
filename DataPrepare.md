@@ -29,6 +29,7 @@
 * Stereo.b 基线长，为向量 $t$ 的模
 * RGBD.DepthMapFactor 深度映射的尺度因子，如果为m的话就是1000.0，mm就是1.0
 * PointCloudMapping.Unit 单位尺度，m为1.0，mm为1000.00
+
 这些可能需要厂商提供，或者是用图像配准算法计算，这个作者并不在行；一个具体的实例如下。
 ```yaml
 %YAML:1.0
