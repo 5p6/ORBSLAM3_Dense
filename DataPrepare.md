@@ -145,7 +145,7 @@ PointCloudMapping.Unit: 1.0 # mm(1000) or m(1)
 其中 data/calib/* 文件夹下的图像是用来标定的数据，而data/left和data/right 则是用于测试双目slam的原数据。
 ### 1.标定数据内参
 这里推一下我的标定工具箱[https://github.com/5p6/calibtool](https://github.com/5p6/calibtool) ，工具箱的目录如下
-![[./img/img1.png]]
+![](./img/image1.png)
 其中工具箱分为C++和python两种版本，这里推荐使用python版本的标定工具，比较简单且好用。在工具箱中有更详细的介绍，这里只介绍创建双目数据集的标定，这里选用方格角点标定方式。标定板可以使用打印店板子打印，标定板的图像如下
 ![[Pasted image 20240523225119.png|350]]
 先克隆仓库
